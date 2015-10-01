@@ -166,17 +166,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
     <script>
      $(function() {
+         function makebig() {
+             $('.sidebar').removeClass('fixed');
+             $('h1').bigtext({ resize: false });
+             $('.sidebar').addClass('fixed');
+         }
+
          WebFont.load({
              custom: {
-                 families: ['Syncopate'], // font-family name
-                 //urls : ['css/fonts/league-gothic/stylesheet.css'] // URL to css
+                 families: ['Syncopate', 'Syncopate Bold'],
+                 urls : ['stylesheets/syncopate.css']
              },
              active: function() {
-                 setTimeout(function () {
-                     $('.container').fadeIn(1000);
-                     $('h1').bigtext({ resize: false });
-                     $('.sidebar').addClass('fixed');
-                 }, 00);
+                 $('.container').fadeIn(1000);
+                 makebig();
+             },
+             inactive: function () {
+                 console.error('inactive');
+                 $('.container').fadeIn(1000);
+                 makebig();
              }
          });
      });

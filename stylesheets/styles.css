@@ -4,9 +4,15 @@
     }
 }
 
-.container h1 {
-    font-weight: bold;
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+    font-family: "Syncopate Bold";
 }
+
 .container .title-1 {
     margin-left: -10px;
     line-height: .85;
