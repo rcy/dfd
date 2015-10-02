@@ -4,6 +4,10 @@
     }
 }
 
+#mc_embed_signup input[type=email] {
+    width: 50%;
+}
+
 .container h1,
 .container h2,
 .container h3,
